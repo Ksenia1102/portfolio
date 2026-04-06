@@ -6,6 +6,9 @@ const AppState = {
     isLoaded: false
 };
 
+// В самом верху, после AppState
+let isAppInitialized = false;
+
 document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
 });
@@ -21,6 +24,7 @@ function initializeApp() {
     updateLanguageUI();
     updateThemeUI();
     AppState.isLoaded = true;
+    generateParticles();
 }
 
 function loadPreferences() {
@@ -210,7 +214,13 @@ function initScrollEffects() {
     }, observerOptions);
     
     const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach(element => observer.observe(element));
+    // Добавляем класс animated только после загрузки страницы
+    setTimeout(() => {
+        fadeElements.forEach(element => {
+            element.classList.add('animated');
+            observer.observe(element);
+        });
+    }, 100);
     
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => observer.observe(section));
@@ -273,6 +283,9 @@ function generateParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
     
+    // Очищаем контейнер перед добавлением (если уже есть частицы)
+    particlesContainer.innerHTML = '';
+    
     const codeSymbols = ['{', '}', '[', ']', '(', ')', '<', '>', '/', '*', '=', '+', '-', ';', ':', '&', '|', '%', '$', '#', '@'];
     const particleCount = 20;
     
@@ -287,13 +300,26 @@ function generateParticles() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    generateParticles();
-});
-
 
 
 //--------------animations.js-----------------
+function hideContentUntilReady() {
+    // Скрываем основной контент до загрузки всех анимаций
+    const mainContent = document.querySelector('main') || document.querySelector('.container');
+    if (mainContent) {
+        mainContent.style.opacity = '0';
+        mainContent.style.visibility = 'hidden';
+    }
+}
+
+function showContentAfterAnimations() {
+    const mainContent = document.querySelector('main') || document.querySelector('.container');
+    if (mainContent) {
+        mainContent.style.opacity = '1';
+        mainContent.style.visibility = 'visible';
+    }
+}
+
 function inView(element, callback, options = {}) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -329,6 +355,7 @@ function animateElement(element, props, options = {}) {
 }
 
 window.addEventListener('load', () => {
+    hideContentUntilReady(); // Скрываем контент сначала
     setTimeout(() => {
         initLoaderAnimation();
     }, 100);
@@ -354,11 +381,13 @@ function initLoaderAnimation() {
                         easing: 'easeInOutQuad',
                         complete: () => {
                             loader.classList.add('hidden');
+                            showContentAfterAnimations(); // ПОКАЗЫВАЕМ контент
                             initPageAnimations();
                         }
                     });
                 } else {
                     loader.classList.add('hidden');
+                    showContentAfterAnimations(); // ПОКАЗЫВАЕМ контент
                     initPageAnimations();
                 }
             }, 300);
@@ -370,17 +399,19 @@ function initLoaderAnimation() {
 }
 
 function initPageAnimations() {
+    // Уменьшаем задержку с 300ms до 100ms или убираем совсем
     setTimeout(() => {
-        initHeroAnimations();
+        // initHeroAnimations();
         initSkillAnimations();
-        initTimelineAnimations();
-        initProjectAnimations();
-        initScrollAnimations();
-        initContactAnimations();
-        animateStats();
-        initParallax();
-        initSmoothScroll();
+        //initTimelineAnimations();
+        //initProjectAnimations();
+        //initScrollAnimations();
+        //initContactAnimations();
+        //animateStats();
+        //initParallax();
+        //initSmoothScroll();
     }, 300);
+    
 }
 
 function initHeroAnimations() {
