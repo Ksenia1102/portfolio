@@ -34,7 +34,7 @@
 }
 
 [data-theme="light"] {
-    --bg-dark: #ffffff;
+    --bg-dark: #F5F7F9;
     --bg-darker: #f8f9fa;
     --bg-card: #ffffff;
     --bg-hover: #f1f3f5;

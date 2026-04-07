@@ -53,14 +53,14 @@
                 <a href="#home" class="nav-link active" data-section="home">
                     <span class="nav-text">Главная</span>
                 </a>
-                <a href="#about" class="nav-link" data-section="about">
+                <a href="#skills" class="nav-link" data-section="skills">
                     <span class="nav-text">Навыки</span>
                 </a>
-                <a href="#skills" class="nav-link" data-section="skills">
-                    <span class="nav-text">Проекты в GitHub</span>
-                </a>
-                <a href="#projects" class="nav-link" data-section="projects">
+                <a href="#projects-fig" class="nav-link" data-section="projects-fig">
                     <span class="nav-text">Проекты в Figma</span>
+                </a>
+                <a href="#projects-git" class="nav-link" data-section="projects-git">
+                    <span class="nav-text">Проекты в GitHub</span>
                 </a>
                 <a href="#contact" class="nav-link" data-section="contact">
                     <span class="nav-text">Контакты</span>
@@ -81,11 +81,11 @@
     </header>
 
     <main class="main-content">
-        <section class="hero-section">
+        <section class="hero-section" id="home">
             <div class="hero-container">
                 <div class="hero-content">
                     <div class="hero-title">
-                        <span class="title-text">Фронтенд-разработчик & UI/UX дизайнер</span>
+                        <span class="title-text">UI/UX дизайнер & веб-разработчик</span>
                     </div>
                     
                     <p class="hero-description">
@@ -96,7 +96,7 @@
                         <a href="assets/CV 1_white.pdf" class="btn btn-primary">
                             <span>Смотреть резюме</span>
                         </a>
-                        <a href="#projects" class="btn btn-secondary">
+                        <a href="#projects-fig" class="btn btn-secondary">
                             <span>Смотреть проекты</span>
                         </a>
                     </div>
@@ -113,7 +113,7 @@
                             <p style="font-size: 2em;">Vue.js</p>
                         </div>
                         <div class="floating-badge badge-3">
-                            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                            <i class="fa-brands fa-node-js"></i>
                             <p style="font-size: 2em;">Node.js</p>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                                     <div class="skill-progress"></div>
                                 </div>
                             </div>
-                            <div class="skill-item" data-skill="React" data-percent="60">
+                            <div class="skill-item" data-skill="React" data-percent="50">
                                 <div class="skill-header">
                                     <span class="skill-name">React</span>
                                     <span class="skill-percent">0%</span>
@@ -210,7 +210,7 @@
                                     <div class="skill-progress"></div>
                                 </div>
                             </div>
-                            <div class="skill-item" data-skill="Node.js" data-percent="60">
+                            <div class="skill-item" data-skill="Node.js" data-percent="50">
                                 <div class="skill-header">
                                     <span class="skill-name">Node.js</span>
                                     <span class="skill-percent">0%</span>
@@ -234,10 +234,129 @@
             </div>
         </section>
 
-        <section id="projects" class="section projects-section">
+        <section id="projects-fig" class="section projects-section">
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Проекты в Figma</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.figma.com/design/qsn4g1xcs1Ic8cUzeLpkKc/%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%80?node-id=0-1&t=p9gyw91YzYEFLHBb-1" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <img src="assets/img/plan.jpg">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Персональный планер</h3>
+                            <p class="project-description">
+                                Веб-приложение для планирования, который помогает ставить цели, отслеживать прогресс для ежедневных и рабочих задач.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.figma.com/design/ujc8mZ5YdFEPhmiCXbYvEx/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-%D1%83%D1%80%D1%84%D1%83?node-id=1-3&t=LqryqW9rNWZZQ2vr-1" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <img src="assets/img/learn.jpg">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Справочник для первокурсников</h3>
+                            <p class="project-description">
+                                Веб-приложение для помощи первокурсникам(включая иностранцев) УрФУ с руководством по прохождению онлайн-курсов и итогового тестирования по ним.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.figma.com/design/n7YUifG7IaUBnznY4ME0yr/A3-ekb-website?node-id=0-1&t=i2RxETcXSKqpRG3T-1" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <img src="assets/img/a3.jpg">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Студия печати А3</h3>
+                            <p class="project-description">
+                                Доработанные и новые макеты сайта для заказчика, студии печати "А3".
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.figma.com/design/rCTKzsLNOXINUhUIO2RuMb/Mobile-Math-game?node-id=0-1&t=HoRkpwM1HsS4zs4V-1" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <img src="assets/img/math.jpg">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Мобильная игра StarFunc</h3>
+                            <p class="project-description">
+                                Интерфейс обучающей мобильной игры на тему математических функций с элементами геймификации.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.figma.com/design/N8tBcpsPPlhFR44lGNNbN5/Mobile-nav-app-UrFU?node-id=0-1&t=dMFfyzopchJ1lHvU-1" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <img src="assets/img/nav.jpg">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Приложение для навигации</h3>
+                            <p class="project-description">
+                                Интерфейс мобильного приложения для навигации по кампусу УрФУ, чтобы упростить поиск аудиторий для первокурсников.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects-git" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
                     <h2 class="section-title">
                         <span class="title-text">Проекты в  GitHub</span>
                     </h2>
@@ -303,82 +422,6 @@
                             <h3 class="project-title">TODO-лист</h3>
                             <p class="project-description">
                                 Cервис на FastAPI, реализующий REST API для управления задачами, WebSocket-уведомления в первое время и фоновую задачу, которая автоматически получает задачи из внешнего API и добавляет их в ресурсы данных.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section projects-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">03</span>
-                    <h2 class="section-title">
-                        <span class="title-text">Проекты в Figma</span>
-                    </h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://www.figma.com/design/n7YUifG7IaUBnznY4ME0yr/A3-ekb-website?node-id=0-1&t=i2RxETcXSKqpRG3T-1" class="project-link" title="View Project">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project-placeholder">
-                                <img src="assets/img/a3.jpg">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Студия печати "А3"</h3>
-                            <p class="project-description">
-                                Доработанные и новые страницы сайта.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://www.figma.com/design/rCTKzsLNOXINUhUIO2RuMb/Mobile-Math-game?node-id=0-1&t=HoRkpwM1HsS4zs4V-1" class="project-link" title="View Project">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project-placeholder">
-                                <img src="assets/img/math.jpg">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Мобильная игра StarFunc</h3>
-                            <p class="project-description">
-                                Интерфейс обучающей мобильной игры на тему математических функций с элементами геймификации.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://www.figma.com/design/N8tBcpsPPlhFR44lGNNbN5/Mobile-nav-app-UrFU?node-id=0-1&t=dMFfyzopchJ1lHvU-1" class="project-link" title="View Project">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project-placeholder">
-                                <img src="assets/img/nav.jpg">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Приложение для навигации</h3>
-                            <p class="project-description">
-                                Интерфейс мобильного приложения для навигации по кампусу УрФУ, чтобы упростить поиск аудиторий для первокурсников.
                             </p>
                         </div>
                     </div>
